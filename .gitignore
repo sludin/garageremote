@@ -1,0 +1,15 @@
+yarn-error.log
+.env
+*~
+*.orig
+node_modules
+.DS_Store
+*.bak
+ignore
+.#*
+docs/vpn
+.vscode
+.history
+.idea
+/tls/
+/tmp
