@@ -55,13 +55,15 @@ class JWTMessageServer
     const wssStates = 
     [
      'close',
-     'error',
      'headers',
      'listening',
       'wsClientError'
     ]
     wssStates.forEach( (state) => this.wss.on( state, () => info( `WSSServer: ${state}` ) ) )
-    
+
+      this.wss.on( 'error', (error) => {
+	  info( error );
+      })
     this.wss.on( 'connection', (ws, req) => {
 
       ws.remoteAddress = req.socket.remoteAddress
