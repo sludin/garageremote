@@ -48,15 +48,12 @@ function createSmartApp( messageServer )
       await context.api.subscriptions.delete() // clear any existing configuration
       await context.api.subscriptions.subscribeToDevices(context.config.contactSensor, 'contactSensor', 'contact', 'contactSensorEventHandler');
       await context.api.subscriptions.subscribeToDevices(context.config.lights, 'switch', 'switch', 'switchEventHandler');
-      await context.api.subscriptions.subscribeToDevices(context.config.relay, 'outlet', 'switch', 'relayEventHandler');
+      await context.api.subscriptions.subscribeToDevices(context.config.relay, 'switch', 'switch', 'relayEventHandler');
 //      await context.api.subscriptions.subscribeToHubHealth('hubHealthHandler')
 
 //      console.log( updateData )
 //      const myDevices = await context.api.devices.listAll()
-
 //      console.log( myDevices )
-
-
 
       infoLogger( "Update Event")
 

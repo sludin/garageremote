@@ -94,6 +94,9 @@ class JWTMessageServer
           if ( error ) {
             console.log( error )
           }
+          else {
+            console.log( "Pong sent" );
+          }
         })
       })
 

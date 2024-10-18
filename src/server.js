@@ -11,6 +11,7 @@ import requestid from './middleware/requestid.js'
 import logger, { infoLogger } from './lib/logger.js'
 
 
+const bindAddr  = process.env.BINDADDR || '127.0.0.1'
 const portHttps = process.env.PORT     || 8443
 const tlsDir    = process.env.TLS_DIR  || '/var/smartthings/tls/letsencrypt/live/smartthings.scrapbot.org'
 const key       = process.env.TLS_KEY  || 'privkey.pem'

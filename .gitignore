@@ -13,3 +13,6 @@ docs/vpn
 .idea
 /tls/
 /tmp
+.gitattributes
+.yarn/
+.yarnrc.yml
